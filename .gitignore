@@ -23,7 +23,7 @@ hs_err_pid*
 
 settings.xml
 
-installer/vdata/*
+custom-vitro/vdata/*
 
 .classpath
 .project
