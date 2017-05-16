@@ -2,5 +2,5 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 :documentModifier_YamlDocumentModifier
-    a   <java:com.github.lawlesst.YamlIndexer> ,
+    a   <java:com.github.lawlesst.YamlDocumentModifier> ,
         <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.DocumentModifier> .

@@ -23,7 +23,10 @@ hs_err_pid*
 
 settings.xml
 
-target/*
 installer/vdata/*
-.idea/*
+
+.classpath
+.project
+.settings/
+target/
 *.iml

@@ -1,0 +1,35 @@
+prefixes:
+  'PREFIX wos: <http://webofscience.com/ontology/wos#>
+  PREFIX vivo: <http://vivoweb.org/ontology/core#>
+  PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX bibo: <http://purl.org/ontology/bibo/>
+  PREFIX tmp: <http://localhost/tmp>
+  PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+  PREFIX vitro:  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+  '
+
+# Solr fields added here
+fields:
+  -
+    name: label_string
+    construct:
+      - CONSTRUCT {
+          ?subject tmp:name ?label
+        } WHERE {
+          ?subject rdfs:label ?label
+        }
+      -
+
+    select:
+        SELECT ?name
+        WHERE {
+          ?subject tmp:name ?name .
+        }
+
+  -
+    name: doi_string
+    select:
+        'SELECT ?doi
+        WHERE {
+          ?subject bibo:doi ?doi .
+        }'
